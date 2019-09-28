@@ -26,7 +26,7 @@ local File = popen("ls Commands")
 				end
 			end
 		else
-			Message:setContent(">>> "..Arguments[1].."is not a valid command! Type .Commands to see the Commands.")
+			Message:setContent(">>> "..Arguments[1].."is not a valid command! http://cyhost.x10.mx/DiscordBot/")
 		end
     else 
         reply(Message,"Type .Commands to see the Commands.")
