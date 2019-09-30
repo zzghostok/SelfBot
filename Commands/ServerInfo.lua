@@ -11,9 +11,18 @@ local Bots,Humans = {},{}
 			insert(Humans,v)
 		end
 	end
-    	reply(Message,"```css\n[Server Name]: "..Message.guild.name.."\n[Owner]: <@"..Message.guild.ownerId..">\n[Region]: "..Message.guild.region.."\n[Guild Categories]: "..Message.guild.categories:count().."\n[Text Channels]: "..Message.guild.textChannels:count().."\n[Voice Channels]: "..Message.guild.voiceChannels:count().."\n[Members]: "..Message.guild.totalMemberCount.."\n[People]: "..#Humans.."\n[Bots]: "..#Bots.."\n[Created at]: "..os.date("%X",Message.guild.createdAt):sub(2,5)..string.lower(os.date("%p",Message.guild.createdAt))..". "..os.date("%A",Message.guild.createdAt).." "..os.date("%B",Message.guild.createdAt).." "..os.date("%d",Message.guild.createdAt)..", "..os.date("%Y",Message.guild.createdAt).."\n[Role Count]: "..Message.guild.roles:count().."\n[Emoji Count]: "..Message.guild.emojis:count().."\n[Joined At]: "..Message.member.joinedAt:sub(1,10).."\n[Server Id]: "..Message.guild.id.."```")
+		if ClientSettings.EmbedMessage then
+			local Embed = newEmbed()
+			Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+			Embed:setTitle(Message.guild.name)
+			Embed:setDescription("\nOwner: <@"..Message.guild.ownerId..">\nRegion: "..Message.guild.region.."\nGuild Categories: "..Message.guild.categories:count().."\nText Channels: "..Message.guild.textChannels:count().."\nVoice Channels: "..Message.guild.voiceChannels:count().."\nMembers: "..Message.guild.totalMemberCount.."\nPeople: "..#Humans.."\nBots: "..#Bots.."\nCreated at: "..os.date("%m/%d/%Y at %I:%M:%S%p",Message.guild.createdAt).."\nRole Count: "..Message.guild.roles:count().."\nEmoji Count: "..Message.guild.emojis:count().."\nJoined At: "..Message.member.joinedAt:sub(1,10).."\nServer Id: "..Message.guild.id)
+			Embed:setFooter()
+			reply(Message,{embed = Embed})
+		else 
+    		reply(Message,">>> [Server Name]: "..Message.guild.name.."\n[Owner]: <@"..Message.guild.ownerId..">\n[Region]: "..Message.guild.region.."\n[Guild Categories]: "..Message.guild.categories:count().."\n[Text Channels]: "..Message.guild.textChannels:count().."\n[Voice Channels]: "..Message.guild.voiceChannels:count().."\n[Members]: "..Message.guild.totalMemberCount.."\n[People]: "..#Humans.."\n[Bots]: "..#Bots.."\n[Created at]: "..os.date("%m/%d/%Y at %I:%M:%S%p",Message.guild.createdAt).."\n[Role Count]: "..Message.guild.roles:count().."\n[Emoji Count]: "..Message.guild.emojis:count().."\n[Joined At]: "..Message.member.joinedAt:sub(1,10).."\n[Server Id]: "..Message.guild.id)
+		end
 	else
-		reply(Message,"You need to use this command in a guild.")
+		reply(Message,">>> You need to use this command in a guild.")
 	end
 end
 

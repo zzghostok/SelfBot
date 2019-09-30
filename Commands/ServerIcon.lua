@@ -4,12 +4,12 @@ Help = {Help = "Gets the Server Icon",Category = "Utility"}
 local function getServerIcon(Message,Arguments)
     if inGuild(Message) then 
         if Message.guild.iconURL then 
-            reply(Message,"```css\nThe server Icon Link is: "..Message.guild.iconURL.."```")
+            reply(Message,Message.guild.iconURL)
         else 
-            reply(Message,"The server has no Icon")
+            reply(Message,">>> The server has no Icon")
         end
     else 
-        reply(Message,"You need to use this command in a guild.")
+        reply(Message,">>> You need to use this command in a guild.")
     end
 end
 

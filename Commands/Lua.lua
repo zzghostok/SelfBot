@@ -17,7 +17,7 @@ Sandbox.Message = Message
     local Work,RunError = pcall(Work)
     if not Work then return reply(Message,">>> ```lua\n"..RunError.."```") end
     if Table[1] then
-        Message:reply("```lua\n"..concat(Table,"\n"):sub(1,1990).."```")
+        reply(Message,"```lua\n"..concat(Table,"\n"):sub(1,1990).."```")
     end
     wait(1)
     Message:delete()
