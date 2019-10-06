@@ -38,7 +38,7 @@ local function English(Message,Arguments)
 		for _,v in pairs(LeetTable) do
 			insert(EnglishTable,LeetLetters[v])
 		end
-	return reply(Message,table.concat(EnglishTable,""))
+	return reply(Message,">>> "..concat(EnglishTable,""))
 end
 
 local function SpeakIn1337(Message,Arguments)
@@ -49,7 +49,7 @@ local function SpeakIn1337(Message,Arguments)
 		for _,v in pairs(EnglishTable) do
 			insert(LeetTable,EnglishLetters[v])
 		end
-	return reply(Message,concat(LeetTable,""))
+	return reply(Message,">>> "..concat(LeetTable,""))
 end
 
 commandAdd("leetify",SpeakIn1337)

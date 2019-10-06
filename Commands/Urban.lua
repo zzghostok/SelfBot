@@ -8,7 +8,7 @@ function urban(Message,Arguments)
 		if New['list'] and New['list'][1] and New['list'][1]['definition'] then
 			if ClientSettings.EmbedMessage then
 				local Embed = newEmbed()
-                Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+                Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
 				Embed:setTitle("Word: "..concat(Arguments," "))
 				Embed:setDescription("**Definition: **```"..tostring(New['list'][1]['definition']):sub(1,500).."```\n**Example:** ```"..tostring(New['list'][1]['example']):sub(1,500).."```")
 				Embed:setFooter()

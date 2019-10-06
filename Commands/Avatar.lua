@@ -6,27 +6,27 @@ local function getAvatar(Message,Arguments)
         for User in Message.mentionedUsers:iter() do
             if ClientSettings.EmbedMessage then 
                 local Embed = newEmbed()
-                Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+                Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
                 Embed:setTitle("Avatar")
                 Embed:setDescription(User.tag.."'s Avatar is")
                 Embed:setFooter()
                 Embed:setImage(User.avatarURL.."?size=1024")
                 reply(Message,{embed = Embed})
             else
-                reply(Message,User.tag.."'s Avatar is "..User.avatarURL.."?size=1024")
+                reply(Message,">>> "..User.tag.."'s Avatar is "..User.avatarURL.."?size=1024")
             end
         end
     else
         if ClientSettings.EmbedMessage then
             local Embed = newEmbed()
-            Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+            Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
             Embed:setTitle("Avatar")
             Embed:setDescription(Message.author.tag..", your Avatar is")
             Embed:setFooter()
             Embed:setImage(Message.author.avatarURL.."?size=1024")
             reply(Message,{embed = Embed})
         else 
-            reply(Message,Message.author.tag..", your Avatar is: "..Message.author.avatarURL.."?size=1024")
+            reply(Message,">>> "..Message.author.tag..", your Avatar is: "..Message.author.avatarURL.."?size=1024")
         end
     end
 end

@@ -32,3 +32,4 @@ end
 
 commandAdd("reload",refresh)
 commandAdd("refresh",refresh)
+commandAdd("reboot",refresh)

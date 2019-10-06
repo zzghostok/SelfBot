@@ -6,7 +6,7 @@ local function getEmoji(Message,Arguments)
         for Emoji in Message.mentionedEmojis:iter() do
             if ClientSettings.EmbedMessage then 
                 local Embed = newEmbed()
-                Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+                Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
                 Embed:setImage(Emoji.url.."?size=1024")
                 Embed:setFooter()
                 reply(Message,{embed = Embed})
@@ -17,13 +17,13 @@ local function getEmoji(Message,Arguments)
     else
         if ClientSettings.EmbedMessage then 
             local Embed = newEmbed()
-            Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+            Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
             Embed:setTitle("Enlarge")
             Embed:setDescription("You need to supply an Emoji for this to work.")
             Embed:setFooter()
             reply(Message,{embed = Embed})
         else
-            reply(Message,"You need to supply an Emoji for this to work.")
+            reply(Message,">>> You need to supply an Emoji for this to work.")
         end
     end
 end

@@ -13,7 +13,7 @@ local Bots,Humans = {},{}
 	end
 		if ClientSettings.EmbedMessage then
 			local Embed = newEmbed()
-			Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+			Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
 			Embed:setTitle(Message.guild.name)
 			Embed:setDescription("\nOwner: <@"..Message.guild.ownerId..">\nRegion: "..Message.guild.region.."\nGuild Categories: "..Message.guild.categories:count().."\nText Channels: "..Message.guild.textChannels:count().."\nVoice Channels: "..Message.guild.voiceChannels:count().."\nMembers: "..Message.guild.totalMemberCount.."\nPeople: "..#Humans.."\nBots: "..#Bots.."\nCreated at: "..osdate("%m/%d/%Y at %I:%M:%S%p",Message.guild.createdAt).."\nRole Count: "..Message.guild.roles:count().."\nEmoji Count: "..Message.guild.emojis:count().."\nJoined At: "..Message.member.joinedAt:sub(1,10).."\nServer Id: "..Message.guild.id)
 			Embed:setFooter()

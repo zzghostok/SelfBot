@@ -10,7 +10,7 @@ local function unbanUser(Message,Arguments)
             else 
                 if ClientSettings.EmbedMessage then 
                     local Embed = newEmbed()
-                    Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+                    Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
                     Embed:setTitle("Unban")
                     Embed:setDescription("You need atleast one Argument (Example: Unban 621984141428129797")
                     Embed:setFooter()
@@ -22,7 +22,7 @@ local function unbanUser(Message,Arguments)
         else 
             if ClientSettings.EmbedMessage then 
                 local Embed = newEmbed()
-                Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+                Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
                 Embed:setTitle("Unban")
                 Embed:setDescription("You need the Ban/Unban permission to use this command.")
                 Embed:setFooter()
@@ -33,7 +33,7 @@ local function unbanUser(Message,Arguments)
         end
     else 
         local Embed = newEmbed()
-        Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+        Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
         Embed:setTitle("Unban")
         Embed:setDescription("You need to use this command in a guild")
         Embed:setFooter()

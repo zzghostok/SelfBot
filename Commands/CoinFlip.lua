@@ -6,7 +6,7 @@ local function coinFlip(Message,Arguments)
     randomseed(ostime())
     if ClientSettings.EmbedMessage then 
         local Embed = newEmbed()
-        Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+        Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
         Embed:setTitle("CoinFlip")
         Embed:setDescription("You flipped the coin and got "..FlipTable[random(1,#FlipTable)])
         Embed:setFooter()

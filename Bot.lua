@@ -33,8 +33,12 @@ startSettings()
 
 Client:on('messageCreate',runCmd)
 Client:on('messageDelete',function(Message)
-	if ClientSettings.LogMessages and not Message.author.bot and not isOwner(Message.author) then
-		writeFile("LoggedMessages.txt","\nChannel name: "..Message.channel.name.."\nMessage Author: "..Message.author.tag.."\nMessage Content: "..Message.content.."\nMessage ID: "..Message.id.."\nCreated At: "..os.date("%m/%d/%Y at %I:%M:%S%p",Message.createdAt).."\nMessage Link: "..Message.link.."\nIs TTS: "..tstring(Message.tts).."\nMentioned all: "..tstring(Message.mentionsEveryone))
+    if ClientSettings.LogMessages and not Message.author.bot and not isOwner(Message.author) then
+        if Message.attachment then 
+            writeFile("LoggedMessages.txt","Message Author: "..Message.author.tag.."\nMessage Content: "..Message.content.."\nMessage Id: "..Message.id.."\nMessage Link: "..Message.link.."\nMessage Channel: "..Message.channel.name.."\nAttachment: "..Message.attachment.url)
+        else 
+            writeFile("LoggedMessages.txt","Message Author: "..Message.author.tag.."\nMessage Content: "..Message.content.."\nMessage Id: "..Message.id.."\nMessage Link: "..Message.link.."\nMessage Channel: "..Message.channel.name)
+        end
 	end
 	if ClientSettings.antiGhostPing then 
 		for User in Message.mentionedUsers:iter() do 

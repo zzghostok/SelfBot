@@ -8,13 +8,13 @@ randomseed(ostime())
         if Arguments[1]:lower() == "rock" or Arguments[1]:lower() == "paper" or Arguments[1]:lower() == "scissors" then
             if ClientSettings.EmbedMessage then
                 local Embed = newEmbed()
-                Embed:setAuthor("CyBot","http://cyhost.x10.mx/Utilities/RaccAttack.png")
+                Embed:setAuthor("CyBot","https://i.imgur.com/WM6c9ld.png")
                 Embed:setTitle("CoinFlip")
                 Embed:setDescription("Your answer: "..Arguments[1].."\nThe Bots answer: "..RpsTable[random(1,#RpsTable)])
                 Embed:setFooter()
                 reply(Message,{embed = Embed})
             else 
-                reply(Message,"Your answer: "..Arguments[1].."\nThe Bots answer: "..RpsTable[random(1,#RpsTable)])
+                reply(Message,">>> Your answer: "..Arguments[1].."\nThe Bots answer: "..RpsTable[random(1,#RpsTable)])
             end
         else
             reply(Message,">>> That is an invalid Argument Correct Arguments: (Rock/Paper/Scissors)")

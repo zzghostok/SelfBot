@@ -16,18 +16,22 @@ function readFile(FileName,Method)
 end
 
 function writeFile(FileName,FileContents,Method)
+local File
 	if Method == "Overwrite" then 
-		open(FileName,"w"):write(FileContents)
-		open(FileName):close()
+		File = open(FileName,"w")
+		File:write(FileContents)
 	else
-		open(FileName,"a"):write(FileContents,"\n")
-		open(FileName):close()
+		File = open(FileName,"a")
+		File:write(FileContents,"\n")
+	end
+	if File then -- edge case 
+		File:close()
 	end
 end
 
 function wait(Time)
 	if cpath:match("%p[\\|/]?%p(%a+)") == "dll" then 
-		return execute("timeout "..tnumber(Time.."000"))
+		return execute("timeout "..Time)
 	elseif cpath:match("%p[\\|/]?%p(%a+)") == "so" then 
 		return execute("sleep "..Time)
 	elseif cpath:match("%p[\\|/]?%p(%a+)") == "dylib" then 
@@ -142,7 +146,7 @@ embed = {
 	setAuthor = function(self,name,Image)
 		self.author = {}
 		self.author.name = name
-		self.author.url = "http://cyhost.x10.mx"
+		self.author.url = "https://discord.gg/vsajMNm"
 		self.author.icon_url = Image
 	end, 
 
@@ -154,9 +158,9 @@ embed = {
 	setFooter = function(self,String)
 		self.footer = {}
 		if String then 
-			self.footer.text = ("Made By Cy#9659 "..String)
+			self.footer.text = ("Made By Cy#7931 "..String)
 		else 
-			self.footer.text = ("Made By Cy#9659")
+			self.footer.text = ("Made By Cy#7931")
 		end
 		self.timestamp = os.date("!%Y-%m-%dT%H:%M:%S")
 		self.color = 9109504
