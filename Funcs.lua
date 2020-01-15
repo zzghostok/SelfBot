@@ -150,7 +150,7 @@ embed = {
 	setAuthor = function(self,name,Image)
 		self.author = {}
 		self.author.name = name
-		self.author.url = "https://discord.gg/vsajMNm"
+		self.author.url = "https://discord.gg/bbpr4va"
 		self.author.icon_url = Image
 	end, 
 
@@ -162,9 +162,9 @@ embed = {
 	setFooter = function(self,String)
 		self.footer = {}
 		if String then 
-			self.footer.text = ("Made By Cy#7931 "..String)
+			self.footer.text = ("Made By !fishgang Cy#6125 "..String)
 		else 
-			self.footer.text = ("Made By Cy#7931")
+			self.footer.text = ("Made By !fishgang Cy#6125 at https://discord.gg/bbpr4va")
 		end
 		self.timestamp = os.date("!%Y-%m-%dT%H:%M:%S")
 		self.color = 9109504
