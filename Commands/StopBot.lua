@@ -2,8 +2,10 @@ require("Funcs")
 Help = {Help = "Stops the SelfBot",Category = "Utility"}
 
 local function StopBot(Message,Arguments)
-    reply(Message,"Goodbye")
-    Client:stop()
+    if Message.author == Client.owner then 
+        reply(Message,"Goodbye")
+        Client:stop()
+    end
 end
 
 commandAdd("stopbot",StopBot)
