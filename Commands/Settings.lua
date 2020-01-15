@@ -6,7 +6,7 @@ local function updateSettings()
 end
 
 local function settings(Message,Arguments)
-	if Arguments[1] then
+	if Arguments[1] and Message.author == Client.owner  then
 		if lower(Arguments[1]) == "cacheallmembers" then
 			ClientSettings.cacheAllMembers = not ClientSettings.cacheAllMembers
 			Message:setContent(">>> Cache All Members has been sent to "..tostring(ClientSettings.cacheAllMembers))
