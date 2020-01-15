@@ -3,8 +3,10 @@ Help = {Help = "Floods the chat with empty lines",Category = "Utility"}
 
 
 local function flood(Message,Arguments)
-    reply(Message,rep("_\n",1000))
-    Message:delete()
+   if Message.author == Client.owner then
+        reply(Message,rep("_\n",1000))
+        Message:delete()
+    end
 end
 
 commandAdd("purgechat",flood)
