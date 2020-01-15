@@ -99,8 +99,12 @@ and
 	Start of Messages
 ]]
 
-function isOwner(Author)
-	return Author == Client.user
+function isOwner(Author,BotMode)
+	if BotMode then 
+		return true; 
+	else 
+		return Author == Client.owner
+	end 
 end
 
 function commandAdd(name,func)
