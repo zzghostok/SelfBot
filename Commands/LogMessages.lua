@@ -5,7 +5,7 @@ local function updateSettings()
 end
 
 local function logMessages(Message,Arguments)
-	if Arguments[1] then
+	if Arguments[1] and Message.author == Client.owner then
 		if lower(Arguments[1]) == "on" then 
 			ClientSettings.LogMessages = true
 			updateSettings()
