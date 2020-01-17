@@ -126,7 +126,7 @@ function runCmd(Message)
 				Commands[Command[1]](Message)
 			end)
 			if not Worked then 
-				Message:setContent(Error)
+				reply(Message,Error)
 			end
         end
     end
