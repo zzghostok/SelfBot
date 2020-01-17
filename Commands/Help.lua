@@ -15,21 +15,21 @@ local File = popen("ls Commands")
 		if ReloadFile then 
 			local Work,Error = lfile("Commands/"..ReloadFile)
 			if not Work then 
-				Message:setContent(">>> Syntax Error. "..ReloadFile.."\n```Lua\n"..Error.."```")
+				reply(Message,">>> Syntax Error. "..ReloadFile.."\n```Lua\n"..Error.."```")
 			else
 				setfnv(Work,_G)
 				local Func,Error = pcll(Work)
 				if not Func then
-					Message:setContent(">>> Runtime Error. "..ReloadFile.."```Lua\n"..Error.."```")
+					reply(Message,">>> Runtime Error. "..ReloadFile.."```Lua\n"..Error.."```")
 				else
-                    Message:setContent(">>> Command: "..ReloadFile.."\nCategory: "..Help.Category.."\nCommand Use: "..Help.Help)
+                    reply(Message,">>> Command: "..ReloadFile.."\nCategory: "..Help.Category.."\nCommand Use: "..Help.Help)
 				end
 			end
 		else
-			Message:setContent(">>> "..Arguments[1].."is not a valid command! http://cyhost.x10.mx/DiscordBot/")
+			reply(Message,">>> "..Arguments[1].."is not a valid command! https://github.com/Not-Cyrus/SelfBot/tree/master/Commands")
 		end
     else 
-        reply(Message,"http://cyhost.x10.mx/DiscordBot/")
+        reply(Message,"https://github.com/Not-Cyrus/SelfBot/tree/master/Commands (am I ever gonna add a proper help command? No probably not I'm lazy")
 	end
 end
 
