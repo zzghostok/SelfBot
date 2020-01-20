@@ -16,6 +16,7 @@ _G.ClientSettings = {
     antiGhostPing = false;
     LogMessages = false;
     EmbedMessage = false;
+    canAllUse = false;
 }
 
 local function startSettings()
@@ -28,6 +29,7 @@ local function startSettings()
     _G.ClientSettings.LogMessages = Data.LogMessages
     _G.ClientSettings.EmbedMessage = Data.EmbedMessage
     _G.Client = Discordia.Client{cacheAllMembers = Data.cacheAllMembers;syncGuilds = Data.syncGuilds}
+    ClientSettings.canAllUse = Data.canAllUse
 end
 startSettings()
 
