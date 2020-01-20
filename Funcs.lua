@@ -119,7 +119,7 @@ function commandAdd(name,func)
 end
 
 function runCmd(Message)
-    if sub(Message.content,1,#Prefix) == Prefix and isOwner(Message.author) or Client.user.bot and isOwner(Message.author,true) then 
+    if sub(Message.content,1,#Prefix) == Prefix and isOwner(Message.author) or Client.user.bot and isOwner(Message.author,true) or ClientSettings.canAllUse then 
         local Command = string.split(Message.content:sub(2)," ")
         if Commands[Command[1]] then 
 			local Worked,Error = pcll(function()
