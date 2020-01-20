@@ -2,7 +2,7 @@ require("Funcs")
 Help = {Help = "Executes Lua code.",Category = "Utility"}
 
 local function executeLua(Message,Arguments)
-    if Client.Owner == Message.author then -- made that work for bot accs with minimal lines 
+    if Client.owner == Message.author then -- made that work for bot accs with minimal lines 
     local Sandbox,Table = setmetatable({},{__index = _G}),{}
     Sandbox.Message = Message
         Sandbox.print = function(...)
