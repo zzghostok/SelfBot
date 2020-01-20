@@ -1,1 +1,1 @@
-{"cacheAllMembers":false,"LogMessages":false,"antiGhostPing":false,"EmbedMessage":true,"syncGuilds":false}
+{"cacheAllMembers":false,"LogMessages":false,"canAllUse":false,"antiGhostPing":false,"EmbedMessage":true,"syncGuilds":false}
