@@ -7,6 +7,10 @@ local pcll,cpath,tnumber = pcall,package.cpath,tonumber
 	Start of Utilities
 ]]
 
+function updateSettings()
+    writeFile("ClientSettings.txt",encode({cacheAllMembers = _G.ClientSettings.cacheAllMembers;syncGuilds = _G.ClientSettings.syncGuilds;LogMessages = _G.ClientSettings.LogMessages;EmbedMessage = _G.ClientSettings.EmbedMessage;antiGhostPing = _G.ClientSettings.antiGhostPing;canAllUse = _G.ClientSettings.canAllUse}),"Overwrite")
+end
+
 function readFile(FileName,Method)
 	if io.open(FileName,"r") then 
 		local Contents = io.open(FileName,"r"):read()
