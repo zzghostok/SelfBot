@@ -1,10 +1,6 @@
 require("Funcs")
 Help = {Help = "Settings [CacheAllMembers/SyncGuilds/AntiGhostPing/canalluse]",Category = "Utility"}
 
-local function updateSettings()
-    writeFile("ClientSettings.txt",encode({cacheAllMembers = _G.ClientSettings.cacheAllMembers;syncGuilds = _G.ClientSettings.syncGuilds;LogMessages = _G.ClientSettings.LogMessages;EmbedMessage = _G.ClientSettings.EmbedMessage;antiGhostPing = _G.ClientSettings.antiGhostPing;canAllUse = _G.ClientSettings.canAllUse}),"Overwrite")
-end
-
 local function settings(Message,Arguments)
 	if Arguments[1] and Message.author == Client.owner  then
 		if lower(Arguments[1]) == "cacheallmembers" then
