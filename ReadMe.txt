@@ -6,7 +6,7 @@ step 3. On your vps copy paste this command sequence into the console:
 cd SelfBot
 bash SetupLinux.sh
 
-step 3.1. On any other LINUX vm just do ./ in replace for bash (you don't have to)
+step 3.1. On any other LINUX vm that isn't (glitch.com) just do ./ in replace for bash (you don't have to)
 step 4. Get your token and put it in the file called Token.txt in the SelfBot folder 
 step 5. go back to console and paste 
 bash StartupLinux.sh
