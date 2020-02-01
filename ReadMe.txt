@@ -2,7 +2,7 @@ step 1. find a vps of your choice (glitch.com is a free one)
 step 2. open your terminal (on glitch.com find where it says tools then click full page console) and paste 
 git clone https://github.com/Not-Cyrus/SelfBot
 
-step 3. On glitch.com copy paste this command sequence: 
+step 3. On your vps copy paste this command sequence into the console: 
 cd SelfBot
 bash SetupLinux.sh
 
