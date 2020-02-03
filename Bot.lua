@@ -29,7 +29,8 @@ local function startSettings()
     _G.ClientSettings.LogMessages = Data.LogMessages
     _G.ClientSettings.EmbedMessage = Data.EmbedMessage
     _G.Client = Discordia.Client{cacheAllMembers = Data.cacheAllMembers;syncGuilds = Data.syncGuilds}
-    ClientSettings.canAllUse = Data.canAllUse
+    _G.Prefix = Data.Prefix
+    _G.ClientSettings.canAllUse = Data.canAllUse
 end
 startSettings()
 
