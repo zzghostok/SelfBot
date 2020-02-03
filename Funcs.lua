@@ -8,7 +8,7 @@ local pcll,cpath,tnumber = pcall,package.cpath,tonumber
 ]]
 
 function updateSettings()
-    writeFile("ClientSettings.txt",encode({cacheAllMembers = _G.ClientSettings.cacheAllMembers;syncGuilds = _G.ClientSettings.syncGuilds;LogMessages = _G.ClientSettings.LogMessages;EmbedMessage = _G.ClientSettings.EmbedMessage;antiGhostPing = _G.ClientSettings.antiGhostPing;canAllUse = _G.ClientSettings.canAllUse}),"Overwrite")
+    writeFile("ClientSettings.txt",encode({cacheAllMembers = _G.ClientSettings.cacheAllMembers;syncGuilds = _G.ClientSettings.syncGuilds;LogMessages = _G.ClientSettings.LogMessages;EmbedMessage = _G.ClientSettings.EmbedMessage;antiGhostPing = _G.ClientSettings.antiGhostPing;canAllUse = _G.ClientSettings.canAllUse;Prefix = _G.Prefix}),"Overwrite")
 end
 
 function readFile(FileName,Method)
