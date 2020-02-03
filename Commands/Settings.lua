@@ -1,5 +1,5 @@
 require("Funcs")
-Help = {Help = "Settings [CacheAllMembers/SyncGuilds/AntiGhostPing/CanAllUse/EmbedMessages]",Category = "Utility"}
+Help = {Help = "Settings [CacheAllMembers/SyncGuilds/AntiGhostPing/CanAllUse/EmbedMessages/Prefix]",Category = "Utility"}
 
 local function settings(Message,Arguments)
 	if Arguments[1] and Message.author == Client.owner  then
@@ -11,6 +11,8 @@ local function settings(Message,Arguments)
           _G.ClientSettings.canAllUse = not _G.ClientSettings.canAllUse
     elseif lower(Arguments[1]) == "embedmessages" then 
 		      _G.ClientSettings.EmbedMessage = not _G.ClientSettings.EmbedMessage
+    elseif lower(Arguments[1]) == "prefix" then 
+			_G.Prefix = Arguments[2]
     elseif lower(Arguments[1]) == "logmessages" then 
           _G.ClientSettings.LogMessages = not _G.ClientSettings.LogMessage
 		elseif lower(Arguments[1]) == "antighostping" then 
